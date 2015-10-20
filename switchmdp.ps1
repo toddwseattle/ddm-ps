@@ -1,6 +1,6 @@
 $ddmpath="C:\Program Files (x86)\Dell\Dell Display Manager\ddm.exe"
 $setinput="/SetActiveInput"
-$mdp="dp2"
-echo @($ddmpath,$setinput,$mdp)
+$monitor="dp2"
+echo @($ddmpath,$setinput,$monitor)
 
-& $ddmpath $setinput $mdp
+& $ddmpath $setinput $monitor
