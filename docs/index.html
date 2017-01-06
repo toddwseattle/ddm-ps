@@ -1,0 +1,27 @@
+title:home
+<h1>Dell Monitor Switch Powershell Script for U3415W and Dell Display Manager (DDM)</h1>
+<p>This project is a small powershell script to make it easier to switch between multiple monitors connected to a DDM supported monitor.  It was designed for use
+    with the <a href="http://www.dell.com/en-us/shop/dell-ultrasharp-34-curved-ultrawide-monitor-u3415w/apd/210-adtr/monitors-monitor-accessories">Dell U3415W 34" Ultrawide Monitor</a>.
+</p>
+<h1>Pre-requisites</h1>
+<p> order to run this script the following Pre-requisites are required</p>
+<ul>
+<li>This script is for Windows systems.  In order for the script to work, Powershell should be enabled.  <a href="http://www.howtogeek.com/106273/how-to-allow-the-execution-of-powershell-scripts-on-windows-7/">This article</a> describes 
+how to set the execution policy of powershell and the execution polices are described <a href="https://msdn.microsoft.com/powershell/reference/5.1/Microsoft.PowerShell.Core/about/about_Execution_Policies">here</a>.</li>
+<li>The script requires the Dell Display Manager (DDM)<code>ddm.exe</code>.   DDM can be downloaded from Dell <a href="http://www.dell.com/support/home/us/en/04/Drivers/DriversDetails?driverId=9YJ4T">here</a>.
+</li>
+</ul>
+<h1>Installation</h1>
+<h2>Running Directly</h2>
+<p>To install the script, save <code>switchdell.ps1</code> to a folder.  I store my mine in <code>\_scripts\ddm\switchdell.ps1</code></p>
+<p>If execution policy permits, you can run it from the powershell command line.</p>
+<p>Alternatively, a desktop shortcut can be created to run the script (this is how the author uses it)</p>
+<h2>Running from a Windows Desktop Shortcut</h2>
+<h3>Create a shortcut</h3>
+<ul>
+    <li>right click on the desktop.  Select New->Shortcut</li>
+    <li>For the shortcut item (first screen of the wizard) select powershell.exe.   On my system its in <code>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</code>, so that is what I enter in the box</li>
+    <li>Add parameters to the shortcut item to invoke switchdell.ps1.  So the full entry for the shortcut is <code>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -command "&C:\_scripts\ddm-ctrl\switchdell.ps1 -Monitor HDMI"</code> is what I used to swtich to the HDMI input from mindi Display port
+    </li>
+    <li>Save</li>
+</ul>
